@@ -32,15 +32,15 @@ production: .env
 #### Start Server
 ###### For development environments...
 ```sh
-$ npm run production
+$ npm start
 ```
 ###### For production environments...
 ```sh
-$ npm start
+$ npm run production
 ```
 Server will starts on 127.0.0.1:2017 or on 127.0.0.1:PORT_ENV
 
-### Routes
+## Routes
 ```sh
 localhost:2017/api/register # Create user(s)
 localhost:2017/api/assign # assign task(s) to user
@@ -48,7 +48,7 @@ localhost:2017/api/unassign # remove task(s) from user
 localhost:2017/api/task/common # show user(s) tasks
 ```
 
-### Example Requests
+## Example Requests
 ##### Create User
 ```json
 {

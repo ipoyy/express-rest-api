@@ -1,7 +1,7 @@
 const development = {
   database: 'orenda',
   username: 'root',
-  password: 'rootpassword',
+  password: 'milano123',
   host: 'localhost',
   dialect: 'mysql' ,
 };

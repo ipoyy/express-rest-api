@@ -43,11 +43,13 @@ const UserController = () => {
                 attributes: ['task'],
             }],
           }).then(function(results) {
-             let tasks = results.filter(el => el.Tasks)
+             let arr = results.filter(el => el.Tasks)
                  .map(el => el.Tasks.map(Tasks => Tasks.task))
                  .reduce((a, b) => a.concat(b), []);
-           return res.status(200).json( {tasks} );
-          })         
+             let tasks = arr.filter((e, i, a) => a.indexOf(e) !== i)
+
+            return tasks.length>0 ? res.status(200).json( {tasks} ): res.status(200).json( {message: "users doesn't have common tasks"});  
+          });
     } catch (err) {
           if (err.errors){
             console.log(err);
